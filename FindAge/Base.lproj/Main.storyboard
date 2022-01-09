@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindAge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Date Of Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-AF-B1a">
+                                <rect key="frame" x="44" y="99" width="340" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="zAH-Vr-jWT">
+                                <rect key="frame" x="44" y="162" width="393" height="216"/>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="694177200">
+                                    <!--2022-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_CA"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-QB-8eL">
+                                <rect key="frame" x="114" y="441" width="200" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JER-9o-kur"/>
+                                    <constraint firstAttribute="height" constant="45" id="h6q-4j-jtc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Find My Age">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="main_buFind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KoM-KR-HDo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Age Is : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGp-AV-EY5">
+                                <rect key="frame" x="14" y="570" width="400" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="G75-cq-5yw"/>
+                                    <constraint firstAttribute="height" constant="44" id="KbM-1F-SIQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H7F-AF-B1a" secondAttribute="trailing" constant="44" id="7Xx-ry-7Uy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bGp-AV-EY5" secondAttribute="trailing" constant="14" id="8Is-Fm-V5z"/>
+                            <constraint firstItem="H7F-AF-B1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="DoQ-XX-yBU"/>
+                            <constraint firstItem="zAH-Vr-jWT" firstAttribute="leading" secondItem="H7F-AF-B1a" secondAttribute="leading" id="Fhu-me-i3X"/>
+                            <constraint firstItem="zAH-Vr-jWT" firstAttribute="top" secondItem="H7F-AF-B1a" secondAttribute="bottom" constant="34.333333333333329" id="LLd-9u-WR5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCt-QB-8eL" secondAttribute="trailing" constant="114" id="SGX-sK-YK9"/>
+                            <constraint firstItem="H7F-AF-B1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="gN9-eM-6YU"/>
+                            <constraint firstItem="aCt-QB-8eL" firstAttribute="centerX" secondItem="zAH-Vr-jWT" secondAttribute="centerX" id="kQB-wA-rHb"/>
+                            <constraint firstItem="H7F-AF-B1a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kWb-cY-tLg"/>
+                            <constraint firstItem="zAH-Vr-jWT" firstAttribute="centerX" secondItem="H7F-AF-B1a" secondAttribute="centerX" id="kXI-mW-U1B"/>
+                            <constraint firstItem="bGp-AV-EY5" firstAttribute="top" secondItem="aCt-QB-8eL" secondAttribute="bottom" constant="84" id="kzL-MS-Ojy"/>
+                            <constraint firstItem="bGp-AV-EY5" firstAttribute="centerX" secondItem="aCt-QB-8eL" secondAttribute="centerX" id="pZ6-7d-Vsq"/>
+                            <constraint firstItem="zAH-Vr-jWT" firstAttribute="trailing" secondItem="H7F-AF-B1a" secondAttribute="trailing" id="slD-2b-eVd"/>
+                            <constraint firstItem="bGp-AV-EY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="suV-P8-bFg"/>
+                            <constraint firstItem="aCt-QB-8eL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="uxA-21-Efd"/>
+                            <constraint firstItem="aCt-QB-8eL" firstAttribute="top" secondItem="zAH-Vr-jWT" secondAttribute="bottom" constant="62.670000000000002" id="vfU-cK-sbJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="main_SelectDate" destination="zAH-Vr-jWT" id="cWn-Yh-CjG"/>
+                        <outlet property="main_tvAge" destination="bGp-AV-EY5" id="oTc-Bf-8Ie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19.626168224299064" y="69.97840172786178"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
